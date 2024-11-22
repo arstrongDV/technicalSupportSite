@@ -2,14 +2,13 @@ import React, { useRef} from "react";
 import emailjs from '@emailjs/browser';
 import './style/ContactForm.css';
 import Swal from 'sweetalert2';
-import InputMask from 'react-input-mask';
 
 const Form = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     emailjs
       .sendForm('service_1abzt2p', 'template_eupx817', form.current, 'CRuhdM24MGEEOaNlJ')
       .then(
@@ -24,6 +23,7 @@ const Form = () => {
           form.current.reset();
         },
         (error) => {
+          console.error("Email sending error", error);  
           Swal.fire({
             position: "top-center",
             icon: "error",
@@ -31,7 +31,9 @@ const Form = () => {
             showConfirmButton: true,
           });
         }
-      );
+      ).catch(err => {
+        console.error("Unexpected error:", err); 
+      });
   };
 
   return (
