@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 import InputMask from 'react-input-mask';
 
 let Form = () => {
-    //const formRef = useRef(null);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -25,10 +24,7 @@ let Form = () => {
             timer: 1500
             });
             form.current.reset();
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
+        }
       );
         };
 
