@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="./imgs/logoBlack.JPG" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -10,34 +10,152 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- <link rel="stylesheet" href="./styls/adaptationStyle.css"> -->
+    <link rel="stylesheet" href="./styls/ourStyls.css">
+    <title>ТЕХ СЕРВІС УМАНЬ</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="mainBlok">
+      <div class="MainContainer">
+        <header>
+          <div class="logoContainer">
+            <img class="icon" src="./imgs/logo.PNG" />
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="navigation">
+            <ul>
+                <a href="#about"><li>Про нас</li></a>
+                <a href="#services"><li>Послуги</li></a>
+                <a href="#contact"><li>Контакт</li></a>
+            </ul>
+          </div>
+        </header>
+          <div class="MainTextContainer">
+            <h1 class="TextSlog">ТЕХ СЕРВІС УМАНЬ</h1>
+            <p class="describeText">Ваш надійний партнер у ремонті та налаштування телевізорів, 
+              антен, інтернету, малої побутової техніки та 
+              налаштуванні сучасних технологій у вашому домі. </p>
+          </div>
+          <div class="arrowDown">
+            <p class="readMore">Прочитати більше</p>
+            <div>
+              <img class="arrowIcon" src="./imgs/arrow.png" />
+            </div>
+          </div>
+      </div>
+      <div id="about" class="AboutUs">
+        <div class="whyUsText">
+          <h1>Чому обирають нас?</h1>
+        </div>
+        <div class="whyUs">
+          <div class="blokAbout">
+            <div>
+              <img class="AboutUsImg" src="./imgs/mechanic.png" />
+            </div>
+            <div class="AboutUsText">
+              <p>
+                Досвідчені майстри – Наші спеціалісти мають 
+                багаторічний досвід у сфері ремонту побутової техніки та 
+                завжди готові вирішити вашу проблему.
+              </p>
+            </div>
+          </div>
+          <div class="blokAbout">
+            <div>
+              <img class="AboutUsImg" src="./imgs/clock.png" />
+            </div>
+            <div class="AboutUsText">
+              <p>
+                Оперативність – Ми цінуємо ваш час і забезпечуємо швидкий 
+                та якісний сервіс.
+              </p>
+            </div>
+          </div>
+          <div class="blokAbout">
+            <div>
+              <img class="AboutUsImg" src="./imgs/service.png" />
+            </div>
+            <div class="AboutUsText">
+              <p>
+                Гарантія якості – Використовуємо лише оригінальні запчастини 
+                і надаємо гарантію на всі виконані роботи.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="services" class="OurService">
+        <div class="OurServiceText">
+          <h1>
+            Наші послуги
+          </h1>
+        </div>
+        <div class="serviceBlokContainer">
+          <div class="serviceBlok">
+            <div> 
+              <img class="seviceImg" src="./imgs/home-appliance.png" />
+            </div>
+            <div class="serviceTextBlok">
+              <p>
+                <span class="boldText">Ремонт побутової техніки:</span> 
+                пилососи, роботи-пилососи, мультиварки, зволожувачі повітря, 
+                акустичні системи, електричні та індукційні 
+                варильні поверхні і так далі.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="serviceBlokContainer">
+          <div class="serviceBlok2">
+            <div> 
+              <img class="seviceImg2" src="./imgs/television.png" />
+            </div>
+            <div class="serviceTextBlok2">
+              <p>
+                <span class="boldText">Ремонт телевізорів:</span> 
+                діагностика та налаштування, усунення проблем із 
+                зображенням, звуком, інтернетом включенням і так далі.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="serviceBlokContainer">
+          <div class="serviceBlok">
+            <div> 
+              <img class="seviceImg" src="./imgs/wifi.png" />
+            </div>
+            <div class="serviceTextBlok">
+              <p>
+                <span class="boldText">Налаштування антен і підключення до інтернету:</span> 
+                професійне налаштування антен для стабільного сигналу та налаштування інтернету.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="formBlok">
+        <div id="root"></div>
+        <div class="FooterTextContainer">
+          <p class="FooterText">
+              Звертайтеся до <span class="boldText">ТЕХ СЕРВІС УМАНЬ</span> для якісного обслуговування вашої техніки. 
+              Ми забезпечимо безперебійну роботу ваших приладів, 
+              щоб ви могли насолоджуватися комфортом і зручністю у вашому домі.
+          </p>
+      </div>
+      </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector('.navigation');
+        const hamburger = document.querySelector('.hamburger');
+        nav.classList.toggle('mobile-active');
+        hamburger.classList.toggle('active');
+    }
+    </script>
   </body>
 </html>
