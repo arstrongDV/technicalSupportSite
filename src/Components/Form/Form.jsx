@@ -4,37 +4,37 @@ import './style/ContactForm.css';
 import Swal from 'sweetalert2';
 
 const Form = () => {
-//   const form = useRef();
+  const form = useRef();
 
-//   const sendEmail = (e) => {
-//     e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
   
-//     emailjs
-//       .sendForm('service_1abzt2p', 'template_eupx817', form.current, 'CRuhdM24MGEEOaNlJ')
-//       .then(
-//         () => {
-//           Swal.fire({
-//             position: "top-center",
-//             icon: "success",
-//             title: "Вашу інформацію надіслано",
-//             showConfirmButton: false,
-//             timer: 1500,
-//           });
-//           form.current.reset();
-//         },
-//         (error) => {
-//           console.error("Email sending error", error);  
-//           Swal.fire({
-//             position: "top-center",
-//             icon: "error",
-//             title: "Помилка при надсиланні. Спробуйте пізніше.",
-//             showConfirmButton: true,
-//           });
-//         }
-//       ).catch(err => {
-//         console.error("Unexpected error:", err); 
-//       });
-//   };
+    emailjs
+      .sendForm('service_1abzt2p', 'template_eupx817', form.current, 'CRuhdM24MGEEOaNlJ')
+      .then(
+        () => {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Вашу інформацію надіслано",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          form.current.reset();
+        },
+        (error) => {
+          console.error("Email sending error", error);  
+          Swal.fire({
+            position: "top-center",
+            icon: "error",
+            title: "Помилка при надсиланні. Спробуйте пізніше.",
+            showConfirmButton: true,
+          });
+        }
+      ).catch(err => {
+        console.error("Unexpected error:", err); 
+      });
+  };
 
   return (
     <div className="FormContainer">
@@ -45,8 +45,7 @@ const Form = () => {
       </div>
       <div>
         <section>
-        {/* ref={form} onSubmit={sendEmail} */}
-          <form> 
+          <form ref={form} onSubmit={sendEmail}> 
             <div className="input-box">
               <label>Імʼя<span className="requared">*</span></label>
               <input
@@ -88,6 +87,13 @@ const Form = () => {
             </button>
           </form>
         </section>
+        <div class="FooterTextContainer">
+          <p class="FooterText">
+              Звертайтеся до <span class="boldText">ТЕХ СЕРВІС УМАНЬ</span> для якісного обслуговування вашої техніки. 
+              Ми забезпечимо безперебійну роботу ваших приладів, 
+              щоб ви могли насолоджуватися комфортом і зручністю у вашому домі.
+          </p>
+      </div>
       </div>
     </div>
   );

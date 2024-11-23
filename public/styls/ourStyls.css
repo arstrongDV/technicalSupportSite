@@ -276,22 +276,6 @@ header {
     font-family: 'Playfair Display', serif;
 }
 
-.FooterTextContainer{
-    width: 100%;
-    height: auto;
-}
-
-.FooterText{
-    font-size: 35px;
-    text-align: center;
-    margin: 20px;
-}
-
-.FooterText{
-    font-size: 30px;
-    text-align: center;
-}
-
 
 @media screen and (max-width: 1200px){
     .blokAbout {
@@ -335,10 +319,6 @@ header {
     .serviceTextBlok2 {
         max-width: 800px;
         font-size: 25px;
-    }
-
-    .FooterText{
-        font-size: 28px;
     }
 }
 
@@ -394,15 +374,6 @@ header {
     .seviceImg2 {
         width: 100px;
         margin-left: 60px;
-    }
-
-
-    .FooterTextContainer{
-        padding-bottom: 100px;
-    }
-
-    .FooterText{
-        font-size: 25px;
     }
 }
 
@@ -490,19 +461,6 @@ header {
     .seviceImg2 {
         width: 90px;
         margin-left: 50px;
-    }
-
-    .FooterText{
-        font-size: 20px;
-    }
-
-
-    .FooterTextContainer{
-        padding-bottom: 100px;
-    }
-
-    .FooterText{
-        font-size: 24px;
     }
 }
 
@@ -599,19 +557,6 @@ header {
     .seviceImg2 {
         width: 70px;
         margin-left: 40px;
-    }
-
-    .FooterText{
-        font-size: 16px;
-        margin: 30px 10px 10px;
-    }
-
-    .FooterTextContainer{
-        padding-bottom: 100px;
-    }
-
-    .FooterText{
-        font-size: 24px;
     }
 }
 
@@ -746,18 +691,5 @@ header {
     .seviceImg2 {
         width: 60px;
         margin-left: 40px;
-    }
-
-    .FooterText{
-        font-size: 14px;
-        margin: 30px 10px 10px;
-    }
-
-    .FooterTextContainer{
-        padding-bottom: 100px;
-    }
-
-    .FooterText{
-        font-size: 18px;
     }
 }
