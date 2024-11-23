@@ -1,6 +1,7 @@
 import React, { useRef} from "react";
 import emailjs from '@emailjs/browser';
 import './style/ContactForm.css';
+import InputMask from "react-input-mask";
 import Swal from 'sweetalert2';
 
 const Form = () => {
@@ -58,12 +59,12 @@ const Form = () => {
             </div>
             <div className="input-box">
               <label>Телефон<span className="requared">*</span></label>
-              <input
-                className="field"
-                placeholder="+380 99 999 9999"
-                type="tel"
-                name="phone"
-              />
+                <InputMask
+                    className="field"
+                    type="tel"
+                    name="phone"
+                    mask="+380 99 999 9999"
+                    placeholder="+380 99 999 9999"/>
             </div>
             <div className="input-box">
               <label>Адреса<span className="requared">*</span></label>
